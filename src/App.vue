@@ -1,16 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<h1 type="text" ref="title">Hello</h1>
+<button @click="handleClick">Click</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+data(){
+  return{
+    title:'My First Vue App'
   }
+},
+methods:{
+  handleClick(){
+    
+    this.$refs.title.classList.add("hey")
+    console.log(this.$refs.title)
+  }
+}
 }
 </script>
 
