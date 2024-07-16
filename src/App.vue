@@ -1,7 +1,7 @@
 <template>
 <h1 type="text" ref="title">Hello</h1>
 <button @click="handleClick">Click</button>
-<Modal />
+<Modal :header="header" :text="text" theme="sale"/>
 </template>
 
 <script>
@@ -13,7 +13,10 @@ export default {
   components: {Modal},
 data(){
   return{
-    title:'My First Vue App'
+    title:'My First Vue App',
+    header:'Sign Up for the Giveaway',
+    text: "some text",
+   
   }
 },
 methods:{
